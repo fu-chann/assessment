@@ -16,16 +16,16 @@ assessmentButton.onclick = () => {
     
     //headerDivided　の作成
     const headerDivided = document.createElement('div');
-    headerDivided.setAttribute = ('class','card-header')
+    headerDivided.setAttribute = ('class','card-header');
     headerDivided.innerText = '診断結果';
     
     //bodyDivided の作成
-    const bodyDivided = document.creatElement('div')
-    bodyDivided.setAttribute('class','card-body')
-    resultDivided.appendChild(bodyDivided)
+    const bodyDivided = document.creatElement('div');
+    bodyDivided.setAttribute('class','card-body');
+    resultDivided.appendChild(bodyDivided);
     
     const paragraph = document.createElement('p');
-    setAttribute.paragraph = ('class','card-text')
+    setAttribute.paragraph = ('class','card-text');
     const result = assessment(userName);
     paragraph.innerText = result;
     
