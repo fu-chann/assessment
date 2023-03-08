@@ -11,18 +11,33 @@ assessmentButton.onclick = () => {
         return;
     }
 
-    // TODO 診断結果表示エリアの作成
+    //診断結果表示エリアの作成
     resultDivided.innerText = ' '
-    const header = document.createElement('h3');
-    header.innerText = '診断結果';
-    resultDivided.appendChild(header);
+    
+    //headerDivided　の作成
+    const headerDivided = document.createElement('div');
+    headerDivided.setAttribute = ('class','card-header')
+    headerDivided.innerText = '診断結果';
+    
+    //bodyDivided の作成
+    const bodyDivided = document.creatElement('div')
+    bodyDivided.setAttribute('class','card-body')
+    resultDivided.appendChild(bodyDivided)
     
     const paragraph = document.createElement('p');
+    setAttribute.paragraph = ('class','card-text')
     const result = assessment(userName);
     paragraph.innerText = result;
-    resultDivided.appendChild(paragraph);
+    
+    //resultDivided に に Bootstrap のスタイルを適用
+    resultDivided.setAttribute('class','card');
+    resultDivided.setAttribute('style','max-width: 700px;');
+    
+    //headerDivided と bodyDivided を resultDivided に差し込む
+    resultDivided.appendChild(headerDivided);
+    bodyDivided.appendChild(paragraph);
 
-    // TODO ツイートエリアの作成
+    //ツイートエリアの作成
     tweetDivided.innerText = ' '
     const anchor = document.createElement('a');
     const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=' + encodeURIComponent('あなたのいいところ') + '&ref_src=twsrc%5Etfw';
