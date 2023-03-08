@@ -16,18 +16,18 @@ assessmentButton.onclick = () => {
     
     //headerDivided　の作成
     const headerDivided = document.createElement('div');
-    headerDivided.setAttribute = ('class','card-header');
+    headerDivided.setAttribute('class','card-header');
     headerDivided.innerText = '診断結果';
     
     //bodyDivided の作成
-    const bodyDivided = document.creatElement('div');
+    const bodyDivided = document.createElement('div');
     bodyDivided.setAttribute('class','card-body');
-    resultDivided.appendChild(bodyDivided);
     
     const paragraph = document.createElement('p');
-    setAttribute.paragraph = ('class','card-text');
+    paragraph.setAttribute = ('class','card-text');
     const result = assessment(userName);
     paragraph.innerText = result;
+    bodyDivided.appendChild(paragraph);
     
     //resultDivided に に Bootstrap のスタイルを適用
     resultDivided.setAttribute('class','card');
@@ -35,8 +35,8 @@ assessmentButton.onclick = () => {
     
     //headerDivided と bodyDivided を resultDivided に差し込む
     resultDivided.appendChild(headerDivided);
-    bodyDivided.appendChild(paragraph);
-
+    resultDivided.appendChild(bodyDivided);
+    
     //ツイートエリアの作成
     tweetDivided.innerText = ' '
     const anchor = document.createElement('a');
